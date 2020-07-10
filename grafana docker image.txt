@@ -1,0 +1,16 @@
+FROM centos:8
+
+MAINTAINER 639600
+
+RUN yum install wget -y
+
+RUN wget https://dl.grafana.com/oss/release/grafana-7.0.6-1.x86_64.rpm
+
+RUN yum install grafana-7.0.6-1.x86_64.rpm -y
+
+CMD /usr/sbin/grafana-server start
+
+CMD /usr/sbin/grafana-server enable
+
+~                                                                               
+~                                      

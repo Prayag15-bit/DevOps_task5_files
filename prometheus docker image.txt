@@ -1,0 +1,15 @@
+FROM centos:8
+
+MAINTAINER 639600
+
+RUN yum install curl -y
+
+RUN yum install wget -y
+
+RUN yum install git -y
+
+RUN mkdir /prometheus
+
+RUN git clone https://github.com/Prayag15-bit/prometheus_repo.git /prometheus
+
+CMD /prometheus/Documents/prometheus-2.19.2.linux-amd64/./prometheus
